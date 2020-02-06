@@ -1,0 +1,38 @@
+<nz-layout>
+  <nz-header>
+    <div class="logo"></div>
+    <ul nz-menu nzTheme="dark" nzMode="horizontal">
+      <li nz-menu-item>
+        encomen<b>dev </b>
+        <i nz-icon nzType="dropbox" nzTheme="outline"></i>
+      </li>
+    </ul>
+  </nz-header>
+  <div class="conteudo">
+    <h1>
+      Digite o código de rastreio para ver o andamento da sua encomenda:
+    </h1>
+
+    <!-- formulario para pesquisar -->
+    <form [formGroup]="formPesquisar" (ngSubmit)="onSubmit(formPesquisar)">
+      <!-- imput do codigo de rastreio -->
+      <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+        <input
+          formControlName="codigoRastreio"
+          type="text"
+          nz-input
+          placeholder="Código de rastreio"
+        />
+      </nz-input-group>
+
+      <!-- botão de pesquisar -->
+      <ng-template #suffixIconButton>
+        <button nz-button nzType="primary" nzSearch>
+          <i nz-icon nzType="search"></i>
+        </button>
+      </ng-template>
+      <div class="mensagem-erro">{{ mensagemErro }}</div>
+    </form>
+  </div>
+  <nz-footer>Encomendev ©2020 by Lucas Batista</nz-footer>
+</nz-layout>

@@ -1,0 +1,39 @@
+[nz-menu] {
+  line-height: 64px;
+}
+
+li {
+  font-size: 22px;
+  font-weight: 100;
+}
+
+nz-breadcrumb {
+  margin: 16px 0;
+}
+
+nz-content {
+  padding: 0 50px;
+}
+
+nz-footer {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.inner-content {
+  background: #fff;
+  margin: 40px;
+  padding: 24px;
+  min-height: 280px;
+}
+
+.conteudo {
+  padding: 12%;
+  background: #fff;
+}
+
+button {
+  float: right;
+}

@@ -1,0 +1,28 @@
+<nz-layout>
+  <nz-header>
+    <div class="logo"></div>
+    <ul nz-menu nzTheme="dark" nzMode="horizontal">
+      <li nz-menu-item>
+        encomen<b>dev </b>
+        <i nz-icon nzType="dropbox" nzTheme="outline"></i>
+      </li>
+    </ul>
+  </nz-header>
+  <div class="conteudo">
+    <h1>Andamento da sua encomenda:</h1>
+    <nz-steps [nzCurrent]="this.alteracoes.length - 1" nzProgressDot>
+      <nz-step
+        *ngFor="let alteracao of alteracoes; let i = index"
+        nzTitle="{{ alteracao.statusEncomenda.descricao }}"
+        nzDescription="{{
+          this.encomendaDataService.formatDate(alteracao.dataAlteracao)
+        }}"
+      ></nz-step>
+    </nz-steps>
+    <br />
+    <button nz-button nzType="primary" [routerLink]="['/']">
+      Nova consulta
+    </button>
+  </div>
+  <nz-footer>Encomendev ©2020 by Lucas Batista</nz-footer>
+</nz-layout>
